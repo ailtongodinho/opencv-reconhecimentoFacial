@@ -21,18 +21,22 @@ def getImagemComId():
         #cv2.waitKey(10)
     return np.array(ids), faces
 
+def treinar(tipo = "T"):
+    ids,faces = getImagemComId()
+    #print(faces)
 
-ids,faces = getImagemComId()
-#print(faces)
+    print("Treinando...")
+    if tipo == "T" or tipo == "E":
+        print("Treinando Eigenfaces")
+        eigenface.train(faces, ids)
+        eigenface.write('classificadorEigen.yml')
+    if tipo == "T" or tipo == "F":
+        print("Treinando Fisherfaces")
+        fisherface.train(faces, ids)
+        fisherface.write('classificadorFisher.yml')
+    if tipo == "T" or tipo == "L":
+        print("Treinando LBPHfaces")
+        lbph.train(faces, ids)
+        lbph.write('classificadorLBPH.yml')
 
-print("Treinando...")
-eigenface.train(faces, ids)
-eigenface.write('classificadorEigen.yml')
-
-fisherface.train(faces, ids)
-fisherface.write('classificadorFisher.yml')
-
-lbph.train(faces, ids)
-lbph.write('classificadorLBPH.yml')
-
-print("Treinamento realizado!")
+    print("Treinamento realizado!")

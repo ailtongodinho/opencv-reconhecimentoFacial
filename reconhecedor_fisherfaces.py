@@ -1,4 +1,5 @@
 import cv2
+from repository.FacesRepository import FacesRepository
 
 detectorFace = cv2.CascadeClassifier("haarcascade-frontalface-default.xml")
 reconhecedor = cv2.face.FisherFaceRecognizer_create()
@@ -18,6 +19,7 @@ while (True):
         cv2.rectangle(imagem, (x, y), (x + l, y + a), (0, 0, 255), 2)
         id, confianca = reconhecedor.predict(imagemFace)
         nome = ""
+        
         if id == 1:
             nome = "Carol"
         else:
