@@ -23,7 +23,7 @@ Na interface, é possível cadastrar um novo usuário, Treinar os modelos dispon
 
 A biblioteca SQLite foi escolhida para fornecer um banco de dados simples, rápido e útil, diretamente do armazenamento do computador. 
 
-O objetivo é salvar o nome do usuário e atribí-lo um ID.
+O objetivo é salvar o nome do usuário e atribuí-lo um ID.
 
 ## Links úteis
 
