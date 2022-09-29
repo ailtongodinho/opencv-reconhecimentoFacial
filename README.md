@@ -9,6 +9,16 @@ Para facilitar o dóminio do Software, foi criada a interface do usuário (aqui 
 
 Na interface, é possível cadastrar um novo usuário, Treinar os modelos disponíveis e Reconhecer o usuário
 
+```
+============================================================
+-1 - Zerar banco de dados e imagens
+ 0 - Sair
+ 1 - Incluir novo usuário
+ 2 - Treinar modelo
+ 3 - Reconhecer usuário
+============================================================
+```
+
 ## Banco de dados
 
 A biblioteca SQLite foi escolhida para fornecer um banco de dados simples, rápido e útil, diretamente do armazenamento do computador. 
